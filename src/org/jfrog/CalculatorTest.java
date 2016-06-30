@@ -13,4 +13,9 @@ public class CalculatorTest extends TestCase {
         int i = c.calculate(2, "+", 2);
         assertEquals(i, 4);
     }
+
+    public void testSubtract(){
+        int i = c.calculate(2, "-", 2);
+        assertEquals(i, 0);
+    }
 }
