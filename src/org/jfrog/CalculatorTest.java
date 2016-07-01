@@ -70,16 +70,16 @@ public class CalculatorTest extends TestCase {
 
     public void testDoubles() {
         double i = c.calculate(2.5, '+', 3.0);
-        assertEquals(i, 5.5);
+        assertEquals(5.5, i);
 
         double j = c.calculate(2.5, '-', 3.14);
-        assertEquals(j, -0.64);
+        assertEquals(-0.64, j);
 
         double k = c.calculate(2.5, '*', 3.14);
-        assertEquals(k, 7.85);
+        assertEquals(7.85, k);
 
         double l = c.calculate(5.5, '/', 4);
-        assertEquals(l, 1.375);
+        assertEquals(1.375, l);
     }
 
 }
