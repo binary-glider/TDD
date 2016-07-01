@@ -11,11 +11,11 @@ public class CalculatorTest extends TestCase {
 
     public void testAdd(){
         int i = c.calculate(2, '+', 2);
-        assertEquals(i, 4);
+        assertEquals(4, i);
     }
 
     public void testSubtract(){
         int i = c.calculate(2, '-', 2);
-        assertEquals(i, 0);
+        assertEquals(0, i);
     }
 }
