@@ -11,21 +11,21 @@ public class CalculatorTest extends TestCase {
 
     public void testAdd(){
         int i = c.calculate(2, '+', 2);
-        assertEquals(i, 4);
+        assertEquals(4, i);
     }
 
     public void testSubtract(){
         int i = c.calculate(2, '-', 2);
-        assertEquals(i, 0);
+        assertEquals(0, i);
     }
 
     public void testMultiply(){
         int i = c.calculate(3, '*', 2);
-        assertEquals(i, 6);
+        assertEquals(6, i);
     }
 
     public void testDivide(){
         int i = c.calculate(4, '/', 2);
-        assertEquals(i, 2);
+        assertEquals(2, i);
     }
 }
