@@ -10,33 +10,33 @@ public class CalculatorTest extends TestCase {
     private Calculator c = new Calculator();
 
     public void testAdd() {
-        int i = c.calculate(2, '+', 2);
-        assertEquals(4, i);
+        double i = c.calculate(2, '+', 2);
+        assertEquals(4.0, i);
     }
 
     public void testSubtract() {
-        int i = c.calculate(2, '-', 2);
-        assertEquals(0, i);
+        double i = c.calculate(2, '-', 2);
+        assertEquals(0.0, i);
     }
 
     public void testMultiply() {
-        int i = c.calculate(3, '*', 2);
-        assertEquals(6, i);
+        double i = c.calculate(3, '*', 2);
+        assertEquals(6.0, i);
     }
 
     public void testMultiply2() {
-        int i = c.calculate(3, 'x', 2);
-        assertEquals(6, i);
+        double i = c.calculate(3, 'x', 2);
+        assertEquals(6.0, i);
     }
 
     public void testDivide() {
-        int i = c.calculate(4, '/', 2);
-        assertEquals(2, i);
+        double i = c.calculate(4, '/', 2);
+        assertEquals(2.0, i);
     }
 
     public void testDivide2() {
-        int i = c.calculate(4, '÷', 1);
-        assertEquals(4, i);
+        double i = c.calculate(4, '÷', 1);
+        assertEquals(4.0, i);
     }
 
     public void testDivideByZero() throws Exception {
@@ -49,23 +49,23 @@ public class CalculatorTest extends TestCase {
         }
     }
 
-    public void testIntStrings() {
-        int i = c.calculate("42", '+', "8");
-        assertEquals(50, i);
+    public void testdoubleStrings() {
+        double i = c.calculate("42", '+', "8");
+        assertEquals(50.0, i);
     }
 
     public void testNegatives() {
-        int i = c.calculate(2, '+', -4);
-        assertEquals(-2, i);
+        double i = c.calculate(2, '+', -4);
+        assertEquals(-2.0, i);
 
-        int j = c.calculate(-2, '-', -4);
-        assertEquals(2, i);
+        double j = c.calculate(-2, '-', -4);
+        assertEquals(2.0, i);
 
-        int k = c.calculate(-2, '*', 4);
-        assertEquals(-8, i);
+        double k = c.calculate(-2, '*', 4);
+        assertEquals(-8.0, i);
 
-        int l = c.calculate(-12, '/', 4);
-        assertEquals(-3, i);
+        double l = c.calculate(-12, '/', 4);
+        assertEquals(-3.0, i);
     }
 
     public void testDoubles() {
