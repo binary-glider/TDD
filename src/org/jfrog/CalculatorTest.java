@@ -10,33 +10,33 @@ public class CalculatorTest extends TestCase {
     private Calculator c = new Calculator();
 
     public void testAdd() {
-        double i = c.calculate(2, '+', 2);
-        assertEquals(4.0, i);
+        int i = c.calculate(2, '+', 2);
+        assertEquals(4, i);
     }
 
     public void testSubtract() {
-        double i = c.calculate(2, '-', 2);
-        assertEquals(0.0, i);
+        int i = c.calculate(2, '-', 2);
+        assertEquals(0, i);
     }
 
     public void testMultiply() {
         double i = c.calculate(3, '*', 2);
-        assertEquals(6.0, i);
+        assertEquals(6, i);
     }
 
     public void testMultiply2() {
-        double i = c.calculate(3, 'x', 2);
-        assertEquals(6.0, i);
+        int i = c.calculate(3, 'x', 2);
+        assertEquals(6, i);
     }
 
     public void testDivide() {
-        double i = c.calculate(4, '/', 2);
-        assertEquals(2.0, i);
+        int i = c.calculate(4, '/', 2);
+        assertEquals(2, i);
     }
 
     public void testDivide2() {
-        double i = c.calculate(4, '÷', 1);
-        assertEquals(4.0, i);
+        int i = c.calculate(4, '÷', 1);
+        assertEquals(4, i);
     }
 
     public void testDivideByZero() throws Exception {
@@ -51,7 +51,7 @@ public class CalculatorTest extends TestCase {
 
 
     public void testIntStrings() {
-        double i = c.calculate("4", '+', "2");
-        assertEquals(6.0, i);
+        int i = c.calculate("4", '+', "2");
+        assertEquals(6, i);
     }
 }
