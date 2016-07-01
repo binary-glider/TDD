@@ -55,4 +55,33 @@ public class CalculatorTest extends TestCase {
         int i = c.calculate("4", "+", "2");
         assertEquals(i, 6);
     }
+
+    public void testNegatives(){
+        int i = c.calculate(2, "+", -4);
+        assertEquals(i, -2);
+
+        int j = c.calculate(-2, "-", -4);
+        assertEquals(i, 2);
+
+        int k = c.calculate(-2, "*", 4);
+        assertEquals(i, -8);
+
+        int l = c.calculate(-12, "/", 4);
+        assertEquals(i, -3);
+    }
+
+    public void testDoubles(){
+        double i = c.calculate(2.5, "+", 3.14);
+        assertEquals(i, 5.64);
+
+        double j = c.calculate(2.5, "-", 3.14);
+        assertEquals(i, -0.64);
+
+        double k = c.calculate(2.5, "*", 3.14);
+        assertEquals(i, 7.85);
+
+        double l = c.calculate(5.5, "/", 4);
+        assertEquals(i, 1.375);
+    }
+
 }
