@@ -9,54 +9,52 @@ import junit.framework.*;
 public class CalculatorTest extends TestCase {
     private Calculator c = new Calculator();
 
-    public void testAdd(){
+    public void testAdd() {
         int i = c.calculate(2, "+", 2);
         assertEquals(i, 4);
     }
 
-    public void testSubtract(){
+    public void testSubtract() {
         int i = c.calculate(2, "-", 2);
         assertEquals(i, 0);
     }
 
-    public void testMultiply(){
+    public void testMultiply() {
         int i = c.calculate(3, "*", 2);
         assertEquals(i, 6);
     }
 
-    public void testMultiply2(){
+    public void testMultiply2() {
         int i = c.calculate(3, "x", 2);
         assertEquals(i, 6);
     }
 
-    public void testDivide(){
+    public void testDivide() {
         int i = c.calculate(4, "/", 2);
         assertEquals(i, 2);
     }
 
-    public void testDivide2(){
+    public void testDivide2() {
         int i = c.calculate(4, "÷", 1);
         assertEquals(i, 4);
     }
 
-    public void testDivideByZero(){
-        throws Exception {
-            try {
-                c.calculate(4, "/", 0);;
-                fail("division by zero should throw an exception!");
-            } catch (RuntimeException expected) {
-                // this is exactly what you expect so
-                // just ignore it and let the test pass
-            }
+    public void testDivideByZero() throws Exception {
+        try {
+            c.calculate(4, "/", 0);
+            fail("division by zero should throw an exception!");
+        } catch (RuntimeException expected) {
+            // this is exactly what you expect so
+            // just ignore it and let the test pass
         }
     }
 
-    public void testIntStrings(){
+    public void testIntStrings() {
         int i = c.calculate("4", "+", "2");
         assertEquals(i, 6);
     }
 
-    public void testNegatives(){
+    public void testNegatives() {
         int i = c.calculate(2, "+", -4);
         assertEquals(i, -2);
 
@@ -70,7 +68,7 @@ public class CalculatorTest extends TestCase {
         assertEquals(i, -3);
     }
 
-    public void testDoubles(){
+    public void testDoubles() {
         double i = c.calculate(2.5, "+", 3.14);
         assertEquals(i, 5.64);
 
