@@ -59,27 +59,27 @@ public class CalculatorTest extends TestCase {
         assertEquals(-2.0, i);
 
         double j = c.calculate(-2, '-', -4);
-        assertEquals(2.0, i);
+        assertEquals(2.0, j);
 
         double k = c.calculate(-2, '*', 4);
-        assertEquals(-8.0, i);
+        assertEquals(-8.0, k);
 
         double l = c.calculate(-12, '/', 4);
-        assertEquals(-3.0, i);
+        assertEquals(-3.0, l);
     }
 
     public void testDoubles() {
-        double i = c.calculate(2.5, '+', 3.14);
-        assertEquals(i, 5.64);
+        double i = c.calculate(2.5, '+', 3.0);
+        assertEquals(i, 5.5);
 
         double j = c.calculate(2.5, '-', 3.14);
-        assertEquals(i, -0.64);
+        assertEquals(j, -0.64);
 
         double k = c.calculate(2.5, '*', 3.14);
-        assertEquals(i, 7.85);
+        assertEquals(k, 7.85);
 
         double l = c.calculate(5.5, '/', 4);
-        assertEquals(i, 1.375);
+        assertEquals(l, 1.375);
     }
 
 }
