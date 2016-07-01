@@ -11,22 +11,22 @@ public class CalculatorTest extends TestCase {
 
     public void testAdd() {
         int i = c.calculate(2, '+', 2);
-        assertEquals(4.0, i);
+        assertEquals(4, i);
     }
 
     public void testSubtract() {
         int i = c.calculate(2, '-', 2);
-        assertEquals(0.0, i);
+        assertEquals(0, i);
     }
 
     public void testMultiply() {
         int i = c.calculate(3, '*', 2);
-        assertEquals(6.0, i);
+        assertEquals(6, i);
     }
 
     public void testDivide() {
         int i = c.calculate(4, '/', 2);
-        assertEquals(2.0, i);
+        assertEquals(2, i);
     }
 
 }
