@@ -82,4 +82,23 @@ public class CalculatorTest extends TestCase {
         assertEquals(l, 1.375);
     }
 
+    public void testFibinacciSequence(){
+        //1 , 1 , 2 , 3 , 5 , 8 , 13 , 21 , 34 , 55 , 89 , 144
+
+        int i = c.fibinacci(1);
+        assertEquals(i, 1);
+
+        int j = c.fibinacci(2);
+        assertEquals(j, 1);
+
+        int k = c.fibinacci(4);
+        assertEquals(k, 5);
+
+        int l = c.fibinacci(8);
+        assertEquals(l, 21);
+
+        int m = c.fibinacci(20);
+        assertEquals(m, 6765);
+    }
+
 }
